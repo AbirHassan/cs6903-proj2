@@ -27,14 +27,14 @@ def main():
     encrypted_number_list = enc_median_housing_values(public_key, secret_number_list) #[public_key.encrypt(x) for x in secret_number_list]
     stop = time.perf_counter()
     print(f"Encrypted numbers: {encrypted_number_list}")
-    print(f"Time to encrypt: {stop - start:0.4f} seconds")
+    print(f"Time to encrypt {inp_size} values: {stop - start:0.4f} seconds")
 
     #Time the decrypt func with different input sizes
     start = time.perf_counter()
     res = dec_median_housing_values(private_key, encrypted_number_list)
     stop = time.perf_counter()
     print(f"Decrypted numbers: {res}")
-    print(f"Time to decrypt: {stop - start:0.4f} seconds")
+    print(f"Time to decrypt {inp_size} values: {stop - start:0.4f} seconds")
 
     #Calculate average of plaintext data
     start = time.perf_counter()
