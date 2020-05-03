@@ -24,7 +24,7 @@ def main():
 
     #Time the encrypt function with different input sizes
     start = time.perf_counter()
-    encrypted_number_list = enc_median_housing_values(public_key, secret_number_list) #[public_key.encrypt(x) for x in secret_number_list]
+    encrypted_number_list = enc_median_housing_values(public_key, secret_number_list)
     stop = time.perf_counter()
     print(f"Encrypted numbers: {encrypted_number_list}")
     print(f"Time to encrypt {inp_size} values: {stop - start:0.4f} seconds")
